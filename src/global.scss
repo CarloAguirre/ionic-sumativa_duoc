@@ -32,6 +32,25 @@
  * https://ionicframework.com/docs/theming/dark-mode
  */
 
-/* @import "@ionic/angular/css/palettes/dark.always.css"; */
-/* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import "@ionic/angular/css/palettes/dark.system.css";
+//  @import "@ionic/angular/css/palettes/dark.always.css";
+// @import "@ionic/angular/css/palettes/dark.class.css";
+// @import '@ionic/angular/css/palettes/dark.class.css';
+body.dark {
+  --ion-background-color: #121212;
+  --ion-text-color: #ffffff;
+}
+
+/* Modo oscuro */
+body.dark {
+  ion-label,
+  h2,
+  p {
+    color: white !important;
+  }
+
+  ion-badge {
+    --color: white !important;
+    --background: var(--ion-color-primary, #3880ff);
+  }
+}
+

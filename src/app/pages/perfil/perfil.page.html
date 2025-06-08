@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="perfilForm">
+    <div [ngClass]="{ animar: animando }">
+      <ion-item>
+        <ion-label position="stacked">Nombre</ion-label>
+        <ion-input formControlName="nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Carrera</ion-label>
+        <ion-input formControlName="carrera"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Fecha de Nacimiento</ion-label>
+        <ion-datetime
+          display-format="DD/MM/YYYY"
+          presentation="date"
+          formControlName="fechaNacimiento">
+        </ion-datetime>
+      </ion-item>
+
+      <!-- <div class="mat-datepicker-wrapper">
+        <mat-form-field appearance="fill" color="primary">
+          <mat-label>Fecha de Nacimiento</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="fechaNacimiento">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div> -->
+
+    </div>
+
+    <ion-button expand="block" color="primary" (click)="guardar()">Guardar</ion-button>
+    <ion-button expand="block" color="medium" (click)="limpiar()">Limpiar</ion-button>
+  </form>
+</ion-content>

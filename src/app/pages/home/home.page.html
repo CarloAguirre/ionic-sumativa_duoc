@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Hola, {{ usuario }}</h2>
+  <p>Selecciona una sección:</p>
+
+  <ion-button expand="block" (click)="navegar('perfil')">Perfil</ion-button>
+  <ion-button expand="block" (click)="navegar('notas')">Notas</ion-button>
+  <ion-button expand="block" (click)="navegar('config')">Configuración</ion-button>
+</ion-content>
