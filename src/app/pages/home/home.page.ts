@@ -72,4 +72,8 @@ export class HomePage implements OnInit {
   this.router.navigate([`/${tipo === 'experiencia' ? 'experiencia' : 'certificaciones'}`])
   }
 
+  mostrarRed() {
+  this.router.navigate([`/explorar-red`])
+  }
+
 }

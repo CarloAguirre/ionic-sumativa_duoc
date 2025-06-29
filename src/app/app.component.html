@@ -11,7 +11,7 @@
         <ion-item routerLink="/perfil" routerDirection="root">Perfil</ion-item>
         <ion-item routerLink="/notas" routerDirection="root">Notas</ion-item>
         <ion-item routerLink="/config" routerDirection="root">Configuración</ion-item>
-        <ion-item routerLink="/login" routerDirection="root">Cerrar sesión</ion-item>
+        <ion-item (click)="cerrarSesion()">Cerrar sesión</ion-item>
       </ion-list>
     </ion-content>
   </ion-menu>

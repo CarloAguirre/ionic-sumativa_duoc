@@ -14,6 +14,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 
 import { SQLite } from '@awesome-cordova-plugins/sqlite/ngx';
 import { IonicStorageModule } from '@ionic/storage-angular';
+import { HttpClientJsonpModule, HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,6 +28,8 @@ import { IonicStorageModule } from '@ionic/storage-angular';
     MatFormFieldModule,
     MatInputModule,
     MatNativeDateModule,
+    HttpClientModule,
+    HttpClientJsonpModule
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, SQLite],
   bootstrap: [AppComponent],

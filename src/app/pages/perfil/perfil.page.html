@@ -10,7 +10,6 @@
   <form [formGroup]="perfilForm">
     <div [ngClass]="{ animar: animando }">
 
-      <!-- FOTO DE PERFIL -->
       <div class="foto-perfil" *ngIf="fotoBase64">
         <img [src]="fotoBase64" alt="Foto de perfil" />
       </div>
