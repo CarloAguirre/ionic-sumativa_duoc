@@ -54,3 +54,60 @@ body.dark {
   }
 }
 
+ion-card {
+  --background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin: 16px;
+  transition: transform 0.2s ease-in-out;
+}
+
+ion-card:hover {
+  transform: scale(1.01);
+}
+
+ion-card-title {
+  font-size: 1.2rem;
+  color: #0077b5; /* LinkedIn blue */
+  margin-bottom: 8px;
+}
+
+ion-label h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+ion-label p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+
+ion-button[color="danger"] {
+  margin-left: auto;
+  --color: white;
+  --background: #e03131;
+  --background-hover: #c92a2a;
+  --box-shadow: none;
+  font-size: 1.2rem;
+}
+
+ion-segment {
+  margin: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+ion-segment-button {
+  --color-checked: #ffffff;
+  --background-checked: #0077b5;
+  font-weight: 600;
+}
+
+ion-icon[name="close-circle"] {
+  font-size: 1.4rem;
+  color: #e03131;
+}
+

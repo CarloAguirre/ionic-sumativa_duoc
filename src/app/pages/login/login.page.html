@@ -1,22 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Login</ion-title>
+    <ion-title>Iniciar Sesión</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <h2>Bienvenido a Mi Perfil Académico</h2>
-
   <ion-item>
-    <ion-input label="Usuario" [(ngModel)]="usuario"></ion-input>
+    <ion-label position="stacked">Usuario</ion-label>
+    <ion-input [(ngModel)]="usuario" maxlength="8" minlength="3"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-input type="password" label="Contraseña" [(ngModel)]="password"></ion-input>
+    <ion-label position="stacked">Contraseña</ion-label>
+    <ion-input type="number" [(ngModel)]="password" maxlength="4"></ion-input>
   </ion-item>
 
-  <ion-button expand="block" (click)="ingresar()">Ingresar</ion-button>
+  <ion-button expand="block" (click)="login()">Ingresar</ion-button>
+  <ion-button expand="block" (click)="registrar()">Registrarse</ion-button>
+
 </ion-content>

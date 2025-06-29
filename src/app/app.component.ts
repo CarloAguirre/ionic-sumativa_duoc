@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DbtaskService } from './services/dbtask.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +9,13 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class AppComponent {
-  constructor() {}
+  constructor(
+    private db: DbtaskService,
+    private router: Router
+  ) {}
+
+   async cerrarSesion() {
+    await this.db.cerrarSesionActual()
+    this.router.navigate(['/login'])
+  }
 }

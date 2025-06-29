@@ -6,10 +6,16 @@
     <ion-title>Perfil</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
   <form [formGroup]="perfilForm">
     <div [ngClass]="{ animar: animando }">
+
+      <!-- FOTO DE PERFIL -->
+      <div class="foto-perfil" *ngIf="fotoBase64">
+        <img [src]="fotoBase64" alt="Foto de perfil" />
+      </div>
+      <ion-button expand="block" (click)="tomarFoto()">Tomar Foto de Perfil</ion-button>
+
       <ion-item>
         <ion-label position="stacked">Nombre</ion-label>
         <ion-input formControlName="nombre"></ion-input>
@@ -33,16 +39,6 @@
           formControlName="fechaNacimiento">
         </ion-datetime>
       </ion-item>
-
-      <!-- <div class="mat-datepicker-wrapper">
-        <mat-form-field appearance="fill" color="primary">
-          <mat-label>Fecha de Nacimiento</mat-label>
-          <input matInput [matDatepicker]="picker" formControlName="fechaNacimiento">
-          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
-      </div> -->
-
     </div>
 
     <ion-button expand="block" color="primary" (click)="guardar()">Guardar</ion-button>
